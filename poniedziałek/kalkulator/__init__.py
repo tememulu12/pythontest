@@ -1,0 +1,1 @@
+from .kalkulator_funk import addition, multiplication, subtraction, division
