@@ -18,9 +18,9 @@
 #     balance = Column(Float)
 class Bankomat:
     def __init__(self, name, account_num: int, balance: float):
-        self.name= name
-        self.account_num= account_num
-        self.balance =balance
+        self.name = name
+        self.account_num = account_num
+        self.balance = balance
 
     def deposit(self, amount):
         self.amount = amount
@@ -32,8 +32,11 @@ class Bankomat:
 
     def withdraw(self, amount):
         self._amount = amount
-        if self.balance:
+        if self.balance > self.amount:
             return f"{self.name} withdraw {self.balance - self.amount}zl"
+        elif self.balance < self.amount:
+            return f"{self.name} you can not withdraw this {self.amount} amount,you don't have enough amount," \
+                   f"you have{self.balance}."
         else:
             return 0
 
