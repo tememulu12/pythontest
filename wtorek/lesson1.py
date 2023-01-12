@@ -2,11 +2,11 @@ import heapq
 import  functools
 
 heap = []
-heapq.heappush()
-heapq.heappush()
-heapq.heappush()
-heapq.heappush()
-heapq.heappush()
+# heapq.heappush()
+# heapq.heappush()
+# heapq.heappush()
+# heapq.heappush()
+# heapq.heappush()
 
 push = functools.partial(heapq.heappush, heap)
 smallest = functools.partial(heapq.nsmallest, iterable=heap)
