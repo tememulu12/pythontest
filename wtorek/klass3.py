@@ -37,6 +37,13 @@ class Supplier(Contact):
         print(f"{order} zamówiono od {self.name}")
 
 
+class Friend(Contact):
+
+    def __init__(self, name, email, phone):
+        super().__init__(name, email)
+        self.phone = phone
+
+
 c_1 = Contact("Adam", 'tomasz@wp.pl')
 c_2 = Contact("Andrzej", 'jakub@wp.pl')
 c = Contact("Tomasz", 'tomasz@wp.pl')
