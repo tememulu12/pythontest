@@ -2,7 +2,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import (
     Column, Integer, String, ForeignKey, create_engine)
 from sqlalchemy.orm import relationship
-
+from sqlalchemy.orm import sessionmaker
 
 from sqlalchemy.orm import relationship
 
