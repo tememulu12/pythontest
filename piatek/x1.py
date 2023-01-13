@@ -16,7 +16,8 @@ for movie in root.findall("./genre/decade/movie/[year='1992']"):
 for movie in root.findall("./genre/decade/movie"):
     year = movie.find('year')
     if year.text == "1992":
-        year.set("year", "2023")
+        year.text = str(2023)
+        year.set("year_changed", "yes")
         tree.write("year_changed.xml")
     else:
         pass
